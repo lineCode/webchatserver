@@ -5,7 +5,7 @@ var router = express.Router()
 router.get(
   '/',
   (req, res, next) => {
-    res.render('index', { title: 'WebRTC chat' });
+    res.render('index', { title: 'WebRTC chat' })
   }
 )
 
