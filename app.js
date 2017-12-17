@@ -5,11 +5,14 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const session = require('express-session')
+const cors = require('cors')
 
 const index = require('./routes/index')
 const chat = require('./routes/chat')
 
 const app = express()
+
+const ws = require('express-ws')(app)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -33,6 +36,8 @@ const sess = {
 if (app.get('env') === 'production') {
   app.set('trust proxy', 1)
   //sess.cookie.secure = true
+} else {
+  app.use(cors({ credentials: true, origin: 'http://localhost:8080' }))
 }
 
 app.use(session(sess))

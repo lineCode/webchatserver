@@ -33,7 +33,12 @@ router.post(
     } else {
       chat.users[req.body.id] = { firstName: req.body.firstName, lastName: req.body.lastName, lastMessage: "" }
       req.session.userId = req.body.id
-      res.status(200).json({ result: "Authenticated", chat: chat })
+
+      let response = {}
+      Object.assign(response, chat)
+      delete response.users[req.body.id]
+
+      res.status(200).json({ result: "Authenticated", chat: response })
     }
   }
 )
