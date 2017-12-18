@@ -33,10 +33,17 @@ router.post(
     } else {
       chat.users[req.body.id] = { firstName: req.body.firstName, lastName: req.body.lastName, lastMessage: "" }
       req.session.userId = req.body.id
-
-      let response = {}
-      Object.assign(response, chat)
-      delete response.users[req.body.id]
+      
+      let response = {
+        title: chat.title,
+        users: {},
+        messages: chat.messages
+      }
+      for (let user in chat.users) {
+        if (user !== req.body.id) {
+          response.users[user] = chat.users[user]
+        }
+      }
 
       res.status(200).json({ result: "Authenticated", chat: response })
     }
@@ -55,9 +62,5 @@ router.post(
     }
   }
 )
-/*
-router.ws('/ws', (ws, req) => {
-  ws.on('message', msg => { console.log('WS: ', msg) })
-})
-*/
+
 module.exports = router
