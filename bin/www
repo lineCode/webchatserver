@@ -21,6 +21,15 @@ app.set('port', port)
 
 var server = http.createServer(app)
 
+var wss = new (require('ws').Server)({ server })
+wss.on('connection', (ws, req) => {
+  console.log('WSS connection: ', req)
+
+  ws.on('message', msg => console.log('WSS message: ', msg))
+
+  ws.send('Hello world!')
+})
+
 /**
  * Listen on provided port, on all network interfaces.
  */

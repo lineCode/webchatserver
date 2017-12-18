@@ -55,5 +55,9 @@ router.post(
     }
   }
 )
-
+/*
+router.ws('/ws', (ws, req) => {
+  ws.on('message', msg => { console.log('WS: ', msg) })
+})
+*/
 module.exports = router

@@ -7,12 +7,10 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 const cors = require('cors')
 
-const index = require('./routes/index')
-const chat = require('./routes/chat')
-
 const app = express()
 
-const ws = require('express-ws')(app)
+const index = require('./routes/index')
+const chat = require('./routes/chat')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
