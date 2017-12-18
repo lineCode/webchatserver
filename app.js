@@ -11,6 +11,19 @@ const app = express()
 
 const index = require('./routes/index')
 const chat = require('./routes/chat')
+const wss = require('./routes/wss')
+
+// websockets setup
+function WebsocketServer() {
+  this.events = {}
+}
+
+WebsocketServer.prototype.on = function (event, callback) {
+  this.events[event] = callback
+}
+
+app.wss = new WebsocketServer()
+app.wss.on('connection', wss)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
