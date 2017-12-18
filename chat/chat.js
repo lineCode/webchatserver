@@ -3,8 +3,8 @@ function Chat() {
 
     this.users = {
         "test": {
-            firstName: "You", lastName: "Are",
-            lastMessage: ""
+            firstName: "Some", lastName: "Guy",
+            lastMessage: "Don't shoot me, I want to live!"
         },
         "freeman": {
             firstName: "Gordon", lastName: "Freeman",
@@ -40,69 +40,78 @@ function Chat() {
         return date
     }
 
+    const User = (id) => {
+        const user = this.users[id]
+        return {
+            id: id,
+            firstName: user.firstName,
+            lastName: user.lastName
+        }
+    }
+
     this.messages = [
         {
-            user: "freeman",
+            user: User("freeman"),
             time: Time(13, 25),
             message: "..."
         },
         {
-            user: "guy",
+            user: User("guy"),
             time: Time(13, 32),
             message: "Give me a gun!"
         },
         {
-            user: "guy",
+            user: User("guy"),
             time: Time(13, 33),
             message: "I need to shoot some demons now! I need to shoot some demons now! I need to shoot some demons now! I need to shoot some demons now!"
         },
         {
-            user: "guy",
+            user: User("guy"),
             time: Time(13, 34),
             message: "Where are demons?"
         },
         {
-            user: "test",
-            time: Time(13, 37),
+            user: User("test"),
+            time: Time(13, 36),
             message: "I'm not a demon!"
         },
         {
-            user: "test",
+            user: User("test"),
             time: Time(13, 37),
             message: 'Very very very very very very very long long long long looooooooooooooooooooooooong message. Was not long enough though'
         },
         {
-            user: "test",
-            time: Time(13, 37),
+            user: User("test"),
+            time: Time(13, 38),
             message: "Don't shoot me, I want to live!"
         },
         {
-            user: "jesse",
-            time: Time(13, 38),
+            user: User("jesse"),
+            time: Time(13, 39),
             message: "I'm not a demon too\nDon't even try to shoot me!"
         },
         {
-            user: "jesse",
-            time: Time(13, 39),
+            user: User("jesse"),
+            time: Time(13, 42),
             message: "Bitch!"
         },
         {
-            user: "rick",
+            user: User("rick"),
             time: Time(13, 44),
             message: "Hey, Doom Guy"
         },
         {
-            user: "rick",
+            user: User("rick"),
             time: Time(13, 45),
             message: "How many people did you kill?"
         },
         {
-            user: "neo",
+            user: User("neo"),
             time: Time(13, 51),
             message: "I followed the white rabbit"
         },
         {
-            user: "jones",
+            user: User("jones"),
             time: Time(13, 58),
             message: "Got some booze?"
         },
