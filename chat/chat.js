@@ -53,67 +53,80 @@ function Chat() {
         {
             user: User("freeman"),
             time: Time(13, 25),
-            message: "..."
+            message: "...",
+            attachments: []
         },
         {
             user: User("guy"),
             time: Time(13, 32),
-            message: "Give me a gun!"
+            message: "Give me a gun!",
+            attachments: []
         },
         {
             user: User("guy"),
             time: Time(13, 33),
-            message: "I need to shoot some demons now! I need to shoot some demons now! I need to shoot some demons now! I need to shoot some demons now!"
+            message: "I need to shoot some demons now! I need to shoot some demons now! I need to shoot some demons now! I need to shoot some demons now!",
+            attachments: []
         },
         {
             user: User("guy"),
             time: Time(13, 34),
-            message: "Where are demons?"
+            message: "Where are demons?",
+            attachments: []
         },
         {
             user: User("test"),
             time: Time(13, 36),
-            message: "I'm not a demon!"
+            message: "I'm not a demon!",
+            attachments: []
         },
         {
             user: User("test"),
             time: Time(13, 37),
-            message: 'Very very very very very very very long long long long looooooooooooooooooooooooong message. Was not long enough though'
+            message: 'Very very very very very very very long long long long looooooooooooooooooooooooong message. Was not long enough though',
+            attachments: []
         },
         {
             user: User("test"),
             time: Time(13, 38),
-            message: "Don't shoot me, I want to live!"
+            message: "Don't shoot me, I want to live!",
+            attachments: []
         },
         {
             user: User("jesse"),
             time: Time(13, 39),
-            message: "I'm not a demon too\nDon't even try to shoot me!"
+            message: "I'm not a demon too\nDon't even try to shoot me!",
+            attachments: []
         },
         {
             user: User("jesse"),
             time: Time(13, 42),
-            message: "Bitch!"
+            message: "Bitch!",
+            attachments: []
         },
         {
             user: User("rick"),
             time: Time(13, 44),
-            message: "Hey, Doom Guy"
+            message: "Hey, Doom Guy",
+            attachments: []
         },
         {
             user: User("rick"),
             time: Time(13, 45),
-            message: "How many people did you kill?"
+            message: "How many people did you kill?",
+            attachments: []
         },
         {
             user: User("neo"),
             time: Time(13, 51),
-            message: "I followed the white rabbit"
+            message: "I followed the white rabbit",
+            attachments: []
         },
         {
             user: User("jones"),
             time: Time(13, 58),
-            message: "Got some booze?"
+            message: "Got some booze?",
+            attachments: [ { type: 0, name: "booze.jpg" }, { type: 0, name: "morebooze.jpg" } ]
         },
     ]
 }

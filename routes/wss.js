@@ -54,7 +54,8 @@ function wss(server, socket) {
                 chat.messages.push({
                     user: { id: socket.user, firstName: user.firstName, lastName: user.lastName },
                     time: time,
-                    message: message.message
+                    message: message.message,
+                    attachments: message.attachments
                 })
 
                 chat.users[socket.user].lastMessage = message.message
@@ -64,7 +65,8 @@ function wss(server, socket) {
                         type: 'message',
                         id: socket.user,
                         time: time,
-                        message: message.message
+                        message: message.message,
+                        attachments: message.attachments
                     }))
                 })
 
