@@ -1,6 +1,8 @@
 function Chat() {
     this.title = "New chat"
 
+    this.webrtcs = {}
+
     this.users = {
         "test": {
             firstName: "Some", lastName: "Guy",
@@ -126,7 +128,10 @@ function Chat() {
             user: User("jones"),
             time: Time(13, 58),
             message: "Got some booze?",
-            attachments: [ { type: 0, name: "booze.jpg" }, { type: 0, name: "morebooze.jpg" } ]
+            attachments: [
+                { id: '0', type: 0, name: "booze.jpg", size: 10056 },
+                { id: '1', type: 0, name: "morebooze.jpg", size: 78543 }
+            ]
         },
     ]
 }
