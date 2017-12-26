@@ -4,7 +4,7 @@ function Chat() {
     this.webrtcs = {}
 
     this.users = {
-        "test": {
+        "someguy": {
             firstName: "Some", lastName: "Guy",
             lastMessage: "Don't shoot me, I want to live!"
         },
@@ -77,19 +77,19 @@ function Chat() {
             attachments: []
         },
         {
-            user: User("test"),
+            user: User("someguy"),
             time: Time(13, 36),
             message: "I'm not a demon!",
             attachments: []
         },
         {
-            user: User("test"),
+            user: User("someguy"),
             time: Time(13, 37),
             message: 'Very very very very very very very long long long long looooooooooooooooooooooooong message. Was not long enough though',
             attachments: []
         },
         {
-            user: User("test"),
+            user: User("someguy"),
             time: Time(13, 38),
             message: "Don't shoot me, I want to live!",
             attachments: []
